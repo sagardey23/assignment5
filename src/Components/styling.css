@@ -66,34 +66,67 @@
 .addstuparent{
     display: flex;
     flex-wrap: wrap;
+    width: 700px;
+    margin: auto;
+    
 }
 
 .addstuchild{
-    background-color: yellow;
+    background-color: rgb(245, 245, 238);
+    padding: 40px;
+    display: flex;
+    
 
 }
 
 .namestyle{
     height: 50px;
-    background-color: tomato;
+    background-color: rgba(128, 128, 128, 0.521);
+    /* margin-left: 20px; */
 
 }
 .agestyle{
     height: 50px;
-    background-color: tomato;
+    background-color: grey;
+    /* margin-left: 20px; */
+
 
 
 }
 
 .coursestyle{
     height: 50px;
-    background-color: tomato;
+    background-color: rgba(128, 128, 128, 0.521);
+    /* margin-left: 20px; */
+
 
 
 }
 .batchstyle{
     height: 50px;
-    background-color: tomato;
+    background-color: grey;
+    /* margin-left: 20px; */
+
+
+
+}
+.canbtn{
+    background-color: rgb(146, 30, 224);
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 5px;
+    margin-right: 10px;
+
+}
+.subbtn{
+    background-color: rgb(152, 41, 226);
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 5px;
+
+
 
 
 }

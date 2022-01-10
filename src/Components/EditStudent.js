@@ -1,9 +1,11 @@
-import React, { useContext, useState } from "react";
-import {  NavLink,  } from 'react-router-dom'
-import { StudentContext } from './StudentContext'
+// import React from 'react'
 import './styling.css'
+import React, { useContext, useState } from "react";
+import {  NavLink  } from 'react-router-dom'
+import { StudentContext } from './StudentContext'
 
-const AddStudent = () => {
+
+const EditStudent = () => {
 
     const [Name, setName] = useState('')
     const [Age, setAge] = useState('')
@@ -23,8 +25,7 @@ const AddStudent = () => {
         
         ] )
     }
-
-        return(
+    return (
         <div className='addstuparent'>
             <div className='addstuchild'>
             <div>
@@ -43,13 +44,13 @@ const AddStudent = () => {
                 <label >Batch:</label>
                 <input  className="batchstyle" id="Batch" type={'text'} name="Batch" value={Batch} onChange={(e) => setBatch(e.target.value)}/> 
                 </div>
-                <div className='addstuchild'>
-                   <button className='canbtn'><NavLink to="/student" >Cancel</NavLink></button> 
-                   <button  className='subbtn'> <NavLink to="/student" onClick={handleAddClick} >Submit</NavLink></button> 
+                <div>
+                   <button><NavLink to="/student" className='cancel'>Cancel</NavLink></button> 
+                   <button> <NavLink to="/student" onClick={handleAddClick} className='click'>Submit</NavLink></button> 
                 </div>
             </div>
          </div>
     )
 }
 
-export default AddStudent;
+export default EditStudent

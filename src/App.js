@@ -7,6 +7,7 @@ import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 // import StudentDesc from './Components/StudentDesc';
 import AddStudent from './Components/AddStudent';
 import { StudentProvider } from './Components/StudentContext';
+import EditStudent from './Components/EditStudent';
 
 function App() {
   return (
@@ -18,6 +19,8 @@ function App() {
           <Route path="/home" element={<Home/>}/>
           <Route path="/students" element={<Students/>}/>
           <Route path="/Add-Student" element={<AddStudent/>}/>
+          <Route path="/Add-Student" element={<AddStudent/>}/>
+          <Route path="/edit-Student" element={<EditStudent/>}/>
           {/* <Route path="/studentDesc" element={<StudentDesc/>}/> */}
           {/* <Route path="/studentDesc/:studentId" element={<StudentDesc/>}/> */}
           <Route path="/contactus" element={<ContactUs/>}/>
