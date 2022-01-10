@@ -1,55 +1,47 @@
 import React, { useContext, useState } from "react";
-import { NavLink } from "react-router-dom";
-import { StudentContext } from "./StudentContext"
+import {  NavLink,  } from 'react-router-dom'
+import { StudentContext } from './StudenContext'
 import './styling.css'
 
-
-
 const AddStudent = () => {
-    const [Name, setName] = useState("");
-    const [Age, setAge] = useState("");
-    const [Course, setCourse] = useState("");
-    const [Batch, setBatch] = useState("");
 
-    const [students, setStudents] = useContext(StudentContext);
+    const [Name, setName] = useState('')
+    const [Age, setAge] = useState('')
+    const [Course, setCourse] = useState('')
+    const [Batch, setBatch] = useState('')
 
-    const handleChange1 = (event) => {
-        setName(event.target.value);
-    }
-    const handleChange2 = (event) => {
-        setAge(event.target.value);
-    }
 
-    const handleChange3 = (event) => {
-        setCourse(event.target.value);    
-    }
+    const [students,setStudents] = useContext(StudentContext)
 
-    const handleChange4 = (event) => {
-        setBatch(event.target.value);
-    }
 
     const handleAddClick = () => {
-        setStudents(    [...students, {  Name: Name, Age: Age, Course: Course, Batch: Batch, Id: new Date().getTime().toString()  }]  )
+
+        setStudents( [ ...students , 
+            { 
+                Name:Name, Age:Age, Course:Course, Batch:Batch 
+            } 
+        
+        ] )
     }
 
         return(
-        <div className='block'>
-            <div className='block1'>
+        <div className='addstuparent'>
+            <div className='addstuchild'>
             <div>
                 <label className="name">Name:</label>
-                <input className="name1" id="name" type={'text'} name="name" value={Name} onChange={handleChange1}/> 
+                <input className="namestyle" id="name" type={'text'} name="name"  value={Name} onChange={(e) => setName(e.target.value)}/> 
                 </div>
                 <div>
                 <label className="age" >Age:</label>
-                <input className="age1" id="Age" type={'number'} name="name" value={Age} onChange={handleChange2}/> 
+                <input className="agestyle" id="Age" type={'number'} name="name" value={Age} onChange={(e) => setAge(e.target.value)}/> 
                 </div>
                 <div>
                 <label className="course" >Course:</label>
-                <input className="course1" id="Course" type={'text'} name="Course" value={Course} onChange={handleChange3}/> 
+                <input className="coursestyle" id="Course" type={'text'} name="Course" value={Course} onChange={(e) => setCourse(e.target.value)}/> 
                 </div>
                 <div>
                 <label className="batch">Batch:</label>
-                <input  className="batch1" id="Batch" type={'text'} name="Batch" value={Batch} onChange={handleChange4}/> 
+                <input  className="batchstyle" id="Batch" type={'text'} name="Batch" value={Batch} onChange={(e) => setBatch(e.target.value)}/> 
                 </div>
                 <div>
                     <NavLink to="/student" className='cancel'>Cancel</NavLink>
